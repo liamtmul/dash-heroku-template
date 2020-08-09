@@ -114,8 +114,8 @@ fig6.update(layout=dict(title=dict(x=0.5)))
 fig6.update_layout(showlegend=False)
 fig6.for_each_annotation(lambda a: a.update(text=a.text.replace("sex=", "")))
 
-app = JupyterDash(__name__, external_stylesheets=external_stylesheets)
-
+#app = JupyterDash(__name__, external_stylesheets=external_stylesheets)
+app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
 
 app.layout = html.Div(
